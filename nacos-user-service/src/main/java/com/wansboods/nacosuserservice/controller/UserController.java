@@ -34,7 +34,7 @@ public class UserController {
     @GetMapping("/{id}")
     public CommonResult<User> getUser(@PathVariable Long id) {
         User user = userService.getUser(id);
-        LOGGER.info("根据id获取用户信息，用户名称为：{}",user.getUsername());
+        LOGGER.info("根据id获取用户信息，用户名称为：{}",user != null ? user.getUsername() : null );
         return new CommonResult<>(user);
     }
 

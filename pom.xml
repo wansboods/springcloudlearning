@@ -20,6 +20,7 @@
         <module>nacos-config-client</module>
         <module>nacos-user-service</module>
         <module>nacos-ribbon-service</module>
+        <module>nacos-feign-service</module>
     </modules>
 
     <properties>

@@ -1,0 +1,6 @@
+feign:
+  hystrix:
+    enabled: true #ÔÚFeignÖĞ¿ªÆôHystrix
+logging:
+  level:
+    com.macro.cloud.service.UserService: debug
