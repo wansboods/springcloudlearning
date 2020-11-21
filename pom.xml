@@ -21,6 +21,8 @@
         <module>nacos-user-service</module>
         <module>nacos-ribbon-service</module>
         <module>nacos-feign-service</module>
+        <module>nacos-micro-knife4j</module>
+        <module>nacos-api-gateway</module>
     </modules>
 
     <properties>
@@ -30,6 +32,12 @@
         <mybatis-plus-boot-starter.version>3.2.0</mybatis-plus-boot-starter.version>
         <spring.cloud-version>Hoxton.SR8</spring.cloud-version>
         <nacos-version>2.2.3.RELEASE</nacos-version>
+        <knife4j-version>2.0.4</knife4j-version>
+        <spring-boot-version>2.2.0.RELEASE</spring-boot-version>
+        <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
+        <hutool-version>5.3.5</hutool-version>
+
+
     </properties>
     <repositories>
         <repository>
@@ -47,6 +55,7 @@
             </snapshots>
         </repository>
     </repositories>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -56,7 +65,20 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+                <version>${knife4j-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j-version}</version>
+            </dependency>
+
         </dependencies>
+
     </dependencyManagement>
     <dependencies>
         <!-- lombok的依赖 -->

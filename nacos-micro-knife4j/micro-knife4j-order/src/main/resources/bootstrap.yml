@@ -1,0 +1,17 @@
+server:
+  port: 9501
+spring:
+  application:
+    name: micro-knife4j-order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.0.106:8848
+      config:
+        server-addr: 192.168.0.106:8848 #Nacos地址
+        file-extension: yaml #这里我们获取的yaml格式的配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
